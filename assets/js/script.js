@@ -1,3 +1,4 @@
+// $() allows you to select element by class or id or create an element that can later be appended to the page
 var tasks = {};
 
 var createTask = function(taskText, taskDate, taskList) {
@@ -44,7 +45,7 @@ var loadTasks = function() {
 var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
-
+// .on refers to the child of an element with a specific class such as .list-group
 $(".list-group").on("click", "p", function() {
   var text = $(this)
   .text()
